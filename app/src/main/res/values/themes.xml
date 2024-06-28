@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Heart_health_app" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/cool_purple</item>
+    </style>
+
+    <style name="Theme.Heart_health_app" parent="Base.Theme.Heart_health_app" />
+
+</resources>

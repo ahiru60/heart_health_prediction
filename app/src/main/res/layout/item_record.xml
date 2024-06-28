@@ -1,0 +1,53 @@
+<!-- res/layout/item_record.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recordItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/round_edged_tab"
+    android:layout_marginTop="4sp"
+    android:layout_marginBottom="4sp"
+    android:layout_marginHorizontal="2sp"
+
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/heartRateTextView"
+            android:layout_width="220sp"
+            android:layout_height="wrap_content"
+            android:text="Heart Rate"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/predictionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|right"
+            android:text="Prediction"
+            android:layout_margin="10sp"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+        <ImageButton
+            android:id="@+id/deleteRecord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+            android:paddingHorizontal="0sp"
+            android:layout_marginHorizontal="10sp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/delete"></ImageButton>
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/timeStampTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="TimeStamp"
+        android:textSize="10sp" />
+</LinearLayout>

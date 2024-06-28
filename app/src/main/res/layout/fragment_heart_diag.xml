@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/cool_purple"
+    tools:context=".HeartDiagFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0sp"
+        android:background="@color/cool_purple"
+        android:paddingLeft="15sp"
+        android:paddingTop="55sp"
+        android:paddingRight="15sp"
+        android:paddingBottom="35sp"
+        android:text="Heart Diagnosis"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:letterSpacing="0.05"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold">
+
+    </TextView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cool_purple">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:padding="15sp"
+                android:orientation="vertical"
+                android:outlineProvider="bounds">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Patient Profile"
+                    android:textStyle="bold"
+                    android:textSize="21sp"
+                    android:layout_marginBottom="15sp">
+
+                </TextView>
+
+                <!-- Age-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="18sp"
+                    android:text="Age" />
+
+                <EditText
+                    android:id="@+id/ageEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Age"
+                    android:inputType="number" />
+
+                <!-- Sex-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="18sp"
+                    android:text="Sex" />
+
+                <Spinner
+                    android:id="@+id/sexSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/sex_array"
+                    android:prompt="@string/sex_prompt" />
+
+                <!-- Income-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="18sp"
+                    android:text="Annual Income" />
+
+                <EditText
+                    android:id="@+id/incomeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Annual Income in $ Dollars"
+                    android:inputType="numberDecimal" />
+
+                <!-- Continent-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="18sp"
+                    android:text="Continent" />
+
+                <Spinner
+                    android:id="@+id/continentSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/continent_array"
+                    android:prompt="@string/continent_prompt" />
+
+                <!-- Hemisphere-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="18sp"
+                    android:text="Hemisphere" />
+
+                <Spinner
+                    android:id="@+id/hemisphereSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/hemisphere_array"
+                    android:prompt="@string/hemisphere_prompt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:orientation="vertical"
+                android:outlineProvider="bounds"
+                android:padding="15sp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15sp"
+                    android:text="Medical History"
+                    android:textSize="21sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <!-- Exercise Hours per Week -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Exercise Hours per Week"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/exerciseHoursPerWeekEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Enter hours of exercise per week"
+                    android:inputType="number" />
+
+                <!-- Diet-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Diet"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/dietSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/diet_array"
+                    android:prompt="@string/diet_prompt" />
+
+                <!-- Medication Use-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Medication Use"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/medicationUseSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/yes_no_array"
+                    android:prompt="@string/medication_use_prompt" />
+
+                <!-- Previous Heart Problems-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Previous Heart Problems"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/previousHeartProblemsSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/yes_no_array"
+                    android:prompt="@string/previous_heart_problems_prompt" />
+
+                <!--        &lt;!&ndash; Previous Heart Problems&ndash;&gt;-->
+                <!--        <TextView-->
+                <!--            android:layout_width="match_parent"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:text="Previous Heart Problems" />-->
+
+                <!--        <EditText-->
+                <!--            android:id="@+id/bmiEditText"-->
+                <!--            android:layout_width="match_parent"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:hint="BMI"-->
+                <!--            android:inputType="number" />-->
+                <!-- Family History-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Family History"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/familyHistorySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/yes_no_array"
+                    android:prompt="@string/family_history_prompt" />
+
+                <!-- Smoking-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Smoking"
+                    android:textSize="18sp" />
+                <Spinner
+                    android:id="@+id/smokingSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/yes_no_array"
+                    android:prompt="@string/smoking_prompt" />
+
+                <!-- Stress Level-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Stress Level"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/stressLevelEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/stress_level_array"
+                    android:prompt="@string/stress_level_prompt" />
+
+
+                <!-- Physical Activity Days per Week-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Physical Activity Days per Week"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/physicalActivityDaysPerWeekSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/days_per_week_array"
+                    android:prompt="@string/alcohol_consumption_prompt" />
+
+                <!-- Sedentary Hours per Day-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Sedentary Hours per Day"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/sedentaryHoursPerDayEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Sedentary Hours per Day"
+                    android:inputType="number" />
+
+                <!-- Alcohol Consumption-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Alcohol Consumption"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/alcoholConsumptionSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/yes_no_array"
+                    android:prompt="@string/alcohol_consumption_prompt" />
+
+                <!-- Sleep Hours per Day-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Sleep Hours per Day"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/sleepHoursPerDayEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Sleep Hours per Day"
+                    android:inputType="number" />
+
+                <!-- Obesity-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Obesity"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/obesitySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/yes_no_array"
+                    android:prompt="@string/obesity_prompt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:padding="15sp"
+                android:orientation="vertical"
+                android:outlineProvider="bounds">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Laboratory Test Biomarkers"
+                    android:textStyle="bold"
+                    android:textSize="21sp"
+                    android:layout_marginBottom="15sp">
+
+                </TextView>
+
+                <!-- Systolic -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Systolic Pressure (High)" />
+
+                <EditText
+                    android:id="@+id/systolicEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Enter systolic pressure"
+                    android:inputType="number" />
+
+                <!-- Diastolic-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="18sp"
+                    android:text="Diastolic Pressure (Low)" />
+
+                <EditText
+                    android:id="@+id/diastolicEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Enter diastolic pressure"
+                    android:inputType="number" />
+
+                <!-- Cholesterol -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="18sp"
+                    android:text="Cholesterol" />
+
+                <EditText
+                    android:id="@+id/cholesterolEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Enter cholesterol level"
+                    android:inputType="number" />
+
+                <!-- Diabetes -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="18sp"
+                    android:text="Diabetes" />
+
+                <Spinner
+                    android:id="@+id/diabetesSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:entries="@array/yes_no_array"
+                    android:prompt="@string/diabetes_prompt" />
+
+                <!-- Triglycerides-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="18sp"
+                    android:text="Triglycerides" />
+
+                <EditText
+                    android:id="@+id/triglyceridesEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Triglycerides"
+                    android:inputType="number" />
+
+                <!-- Heart Rate-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="18sp"
+                    android:text="Heart Rate" />
+
+                <EditText
+                    android:id="@+id/heartRateEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Heart Rate"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingTop="10sp"
+                android:paddingRight="16dp"
+                android:paddingBottom="30dp">
+
+                <ProgressBar
+                    android:id="@+id/heartDiagprogressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:visibility="gone"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="predict"
+                    android:layout_gravity="center"
+                    android:id="@+id/predictButton"
+                    />
+
+                <TextView
+                    android:id="@+id/resultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:paddingTop="16dp"
+                    android:text="Result will be shown here"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    </LinearLayout>
+</FrameLayout>
